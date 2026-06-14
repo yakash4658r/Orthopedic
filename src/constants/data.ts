@@ -31,7 +31,7 @@ export const HERO_BANNERS = [
       'Hon’ member of the International advisory board for the Journal of American Academy of Orthopaedic Surgeons (JAAOS)'
     ],
     cta: { label: 'ABOUT DR. GAVASKAR', href: '#about-section' },
-    bg: '/images/Ashok S. Gavaskar.png',
+    bg: import.meta.env.BASE_URL + 'images/Ashok S. Gavaskar.png',
   },
   {
     id: 2,
@@ -45,7 +45,7 @@ export const HERO_BANNERS = [
       'Expert in computer-navigated and motion-preserving disc replacements'
     ],
     cta: { label: 'ABOUT DR. PARTHASARATHY', href: '#about-section' },
-    bg: '/images/Dr. Parthasarathy Srinivasan.png',
+    bg: import.meta.env.BASE_URL + 'images/Dr. Parthasarathy Srinivasan.png',
   },
   {
     id: 3,
@@ -59,7 +59,7 @@ export const HERO_BANNERS = [
       '18+ Years of surgical experience in advanced keyhole joint care'
     ],
     cta: { label: 'ABOUT DR. PRAKASH', href: '#about-section' },
-    bg: '/images/Prakash Ayyadurai.png',
+    bg: import.meta.env.BASE_URL + 'images/Prakash Ayyadurai.png',
   },
 ];
 
