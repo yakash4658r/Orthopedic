@@ -42,19 +42,19 @@ export default function HeroSwiper() {
                   <img
                     src={banner.bg}
                     alt={banner.doctorName}
-                    className="w-full h-full object-cover object-center"
+                    className="w-full h-full object-cover object-top md:object-[center_20%]"
                     loading="eager"
                   />
                 </div>
 
                 {/* 2. OVERLAY GRADIENT */}
-                {/* Dark teal/blue overlay mapping from left to right */}
-                <div className="absolute inset-0 bg-[#0A2540]/80 sm:bg-gradient-to-r from-[#07243B] via-[#07243B]/90 to-transparent" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#07243B]/80 via-transparent to-transparent sm:hidden" />
+                {/* Much lighter overlay so images are clearly visible on the right */}
+                <div className="absolute inset-0 bg-[#0A2540]/60 sm:bg-gradient-to-r from-[#0A2540] via-[#0A2540]/50 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540]/90 via-[#0A2540]/20 to-transparent sm:hidden" />
 
                 {/* 3. TEXT CONTENT (Left Aligned) */}
-                <div className="relative z-20 w-full max-w-7xl mx-auto px-6 lg:px-12 flex flex-col justify-center h-full pt-16">
-                  <div className="max-w-2xl lg:max-w-3xl">
+                <div className="relative z-20 w-full max-w-7xl mx-auto px-6 lg:px-16 flex flex-col justify-center h-full pt-24 lg:pt-32 pb-20">
+                  <div className="w-full lg:w-[65%] max-w-2xl lg:max-w-3xl">
                     
                     {/* Pill Badge */}
                     {isActive && (
@@ -164,7 +164,7 @@ export default function HeroSwiper() {
       </div>
 
       {/* 5. PAGINATION DOTS */}
-      <div className="absolute bottom-6 left-0 right-0 z-30 flex justify-center">
+      <div className="absolute bottom-8 left-0 right-0 z-30 flex justify-center lg:justify-start lg:pl-16 w-full max-w-7xl mx-auto">
         <div className="hero-swiper-pagination flex gap-2" />
       </div>
 
