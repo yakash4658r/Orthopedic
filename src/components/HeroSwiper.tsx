@@ -37,14 +37,16 @@ export default function HeroSwiper() {
             {({ isActive }) => (
               <div className="relative w-full h-full flex items-center">
                 
-                {/* 1. FULL BACKGROUND IMAGE */}
-                <div className="absolute inset-0 w-full h-full">
-                  <img
-                    src={banner.bg}
-                    alt={banner.doctorName}
-                    className="w-full h-full object-cover object-top md:object-[center_20%]"
-                    loading="eager"
-                  />
+                {/* 1. BACKGROUND IMAGE (Contained so it's fully visible) */}
+                <div className="absolute inset-0 w-full h-full flex justify-end">
+                  <div className="w-full lg:w-[65%] h-full relative">
+                    <img
+                      src={banner.bg}
+                      alt={banner.doctorName}
+                      className="w-full h-full object-contain lg:object-right object-center"
+                      loading="eager"
+                    />
+                  </div>
                 </div>
 
                 {/* 2. OVERLAY GRADIENT */}
