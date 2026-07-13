@@ -54,7 +54,7 @@ export default function Footer() {
         <div>
           <div className="flex items-center gap-3 mb-4">
             <div className="w-10 h-10 flex items-center justify-center">
-              <img src={import.meta.env.BASE_URL + 'logo.png'} alt="Logo" className="w-full h-full object-contain" />
+              <img src={import.meta.env.BASE_URL + 'Logo.png'} alt="Logo" className="w-full h-full object-contain" />
             </div>
             <span className="font-heading text-white text-xl font-bold">Ortho<span style={{ color: '#C9A66B' }}>3Trio</span></span>
           </div>

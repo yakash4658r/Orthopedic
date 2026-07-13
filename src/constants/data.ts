@@ -29,7 +29,7 @@ export const HERO_BANNERS = [
       'One Roof. Every Joint. No Guesswork.'
     ],
     cta: { label: 'MEET THE TEAM', href: '#about-section' },
-    bg: import.meta.env.BASE_URL + 'images/Ashok S. Gavaskar.png',
+    bg: import.meta.env.BASE_URL + 'All-together-transparent.png',
   },
   {
     id: 2,
