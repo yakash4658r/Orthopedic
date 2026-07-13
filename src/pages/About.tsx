@@ -115,7 +115,7 @@ export default function About() {
             </div>
             <div className="flex gap-4">
               <button onClick={() => navigate('/contact')} className="btn-gold px-6 py-3 rounded-xl text-sm font-semibold">Book a Visit</button>
-              <button onClick={() => navigate('/doctors')} className="btn-outline-gold px-6 py-3 rounded-xl text-sm">Meet Our Team</button>
+              <button onClick={() => navigate('/services')} className="btn-outline-gold px-6 py-3 rounded-xl text-sm">View Expertise</button>
             </div>
           </AnimateIn>
         </div>
