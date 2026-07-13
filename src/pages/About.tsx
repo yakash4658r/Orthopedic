@@ -221,31 +221,19 @@ export default function About() {
         </div>
       </section>
 
-      {/* Values */}
-      <section className="py-24 px-6 lg:px-10">
-        <div className="max-w-7xl mx-auto">
-          <AnimateIn className="text-center mb-14">
-            <div className="flex justify-center mb-4"><div className="section-line" /></div>
-            <h2 className="font-heading text-4xl font-bold text-[#0A2540] mb-3">Our Core Values</h2>
-            <p className="text-[#8A9BB0] max-w-lg mx-auto">The principles that guide every decision, every day.</p>
+      {/* Our Shared Philosophy */}
+      <section className="py-24 px-6 lg:px-10 bg-[#0A2540]">
+        <div className="max-w-4xl mx-auto text-center">
+          <AnimateIn>
+            <div className="flex justify-center mb-4"><div className="section-line" style={{ background: '#C9A66B' }} /></div>
+            <h2 className="font-heading text-4xl font-bold text-white mb-6">Our Shared Philosophy</h2>
+            <p className="text-white/80 text-xl leading-relaxed mb-6 font-medium">
+              Ortho3Trio was founded on the belief that orthopaedic care should never feel like a conveyor belt.
+            </p>
+            <p className="text-white/60 text-lg leading-relaxed">
+              Every patient — whether a weekend athlete, a working professional with back pain, or someone finally ready for a joint replacement — deserves a plan built around their life, explained in plain language, and delivered by the person best qualified to deliver it.
+            </p>
           </AnimateIn>
-          <StaggerChildren className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {ABOUT.values.map(v => (
-              <FadeItem key={v.title}>
-                <motion.div
-                  className="bg-[#F4F6F8] rounded-2xl p-7 group flex flex-col items-start"
-                  whileHover={{ backgroundColor: '#0A2540', y: -6 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <div className="mb-4 text-[#C9A66B] group-hover:text-white transition-colors">
-                    <LucideIcon name={v.icon} size={28} />
-                  </div>
-                  <h3 className="font-heading text-lg font-bold text-[#0A2540] mb-2 group-hover:text-[#C9A66B] transition-colors">{v.title}</h3>
-                  <p className="text-[#8A9BB0] text-sm leading-relaxed group-hover:text-white/85 transition-colors">{v.desc}</p>
-                </motion.div>
-              </FadeItem>
-            ))}
-          </StaggerChildren>
         </div>
       </section>
     </PageTransition>
