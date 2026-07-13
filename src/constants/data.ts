@@ -42,7 +42,7 @@ export const HERO_BANNERS = [
       'Helping patients avoid long, painful recoveries'
     ],
     cta: { label: 'ABOUT DR. PARTHASARATHY', href: '#about-section' },
-    bg: import.meta.env.BASE_URL + 'images/Dr. Parthasarathy Srinivasan.png',
+    bg: import.meta.env.BASE_URL + 'spine_banner.png',
   },
   {
     id: 3,
@@ -55,7 +55,7 @@ export const HERO_BANNERS = [
       'Helping you get back in the game safely'
     ],
     cta: { label: 'ABOUT DR. PRAKASH', href: '#about-section' },
-    bg: import.meta.env.BASE_URL + 'images/Prakash Ayyadurai.png',
+    bg: import.meta.env.BASE_URL + 'knee_banner.png',
   },
 ];
 
