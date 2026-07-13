@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { BRAND } from '../constants/data';
 
 export default function WhatsAppButton() {
-  const whatsappUrl = `https://wa.me/${BRAND.whatsapp}?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment%20at%20OrthoCare%20Elite.`;
+  const whatsappUrl = `https://wa.me/${BRAND.whatsapp}?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment%20at%20Ortho3Trio.`;
 
   return (
     <motion.a

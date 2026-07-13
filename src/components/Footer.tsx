@@ -53,10 +53,10 @@ export default function Footer() {
         {/* Col 1 — Brand */}
         <div>
           <div className="flex items-center gap-3 mb-4">
-            <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #C9A66B, #E8C98A)' }}>
-              <svg width="22" height="22" viewBox="0 0 44 44" fill="none"><path d="M19 14H25V19H30V25H25V30H19V25H14V19H19V14Z" fill="#0A2540" /></svg>
+            <div className="w-10 h-10 flex items-center justify-center">
+              <img src={import.meta.env.BASE_URL + 'logo.png'} alt="Logo" className="w-full h-full object-contain" />
             </div>
-            <span className="font-heading text-white text-xl font-bold">OrthoCare <span style={{ color: '#C9A66B' }}>Elite</span></span>
+            <span className="font-heading text-white text-xl font-bold">Ortho<span style={{ color: '#C9A66B' }}>3Trio</span></span>
           </div>
           <p className="text-white/40 text-sm leading-relaxed mb-5">
             Chennai's premier multi-specialty orthopaedic destination. Fellowship-trained surgeons. World-class outcomes.

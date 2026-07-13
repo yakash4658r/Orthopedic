@@ -75,17 +75,12 @@ export default function Navbar() {
 
           {/* Logo */}
           <NavLink to="/" className="flex items-center gap-3 group">
-            <div
-              className="w-10 h-10 rounded-xl flex items-center justify-center transition-transform duration-300 group-hover:scale-110"
-              style={{ background: 'linear-gradient(135deg, #C9A66B, #E8C98A)' }}
-            >
-              <svg width="22" height="22" viewBox="0 0 44 44" fill="none">
-                <path d="M19 14H25V19H30V25H25V30H19V25H14V19H19V14Z" fill="#0A2540" />
-              </svg>
+            <div className="w-10 h-10 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+              <img src={import.meta.env.BASE_URL + 'logo.png'} alt="Logo" className="w-full h-full object-contain" />
             </div>
             <div>
-              <span className="font-heading text-white text-xl font-bold tracking-wide leading-none">OrthoCare</span>
-              <span className="font-heading text-xl font-bold tracking-wide leading-none" style={{ color: '#C9A66B' }}> Elite</span>
+              <span className="font-heading text-white text-xl font-bold tracking-wide leading-none">Ortho</span>
+              <span className="font-heading text-xl font-bold tracking-wide leading-none" style={{ color: '#C9A66B' }}>3Trio</span>
             </div>
           </NavLink>
 
@@ -167,12 +162,10 @@ export default function Navbar() {
             >
               <div className="flex items-center justify-between px-8 py-6 border-b border-white/10">
                 <NavLink to="/" className="flex items-center gap-3" onClick={() => setDrawerOpen(false)}>
-                  <div className="w-9 h-9 rounded-xl flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #C9A66B, #E8C98A)' }}>
-                    <svg width="18" height="18" viewBox="0 0 44 44" fill="none">
-                      <path d="M19 14H25V19H30V25H25V30H19V25H14V19H19V14Z" fill="#0A2540" />
-                    </svg>
+                  <div className="w-9 h-9 flex items-center justify-center">
+                    <img src={import.meta.env.BASE_URL + 'logo.png'} alt="Logo" className="w-full h-full object-contain" />
                   </div>
-                  <span className="font-heading text-white text-lg font-bold">OrthoCare <span style={{ color: '#C9A66B' }}>Elite</span></span>
+                  <span className="font-heading text-white text-lg font-bold">Ortho<span style={{ color: '#C9A66B' }}>3Trio</span></span>
                 </NavLink>
                 <button onClick={() => setDrawerOpen(false)} className="text-white/60 hover:text-white p-2 rounded-lg hover:bg-white/10 transition-colors">
                   <X size={22} />

@@ -30,17 +30,9 @@ export default function PageLoader() {
               initial={{ rotateY: 90 }}
               animate={{ rotateY: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-              className="w-20 h-20 rounded-2xl flex items-center justify-center"
-              style={{
-                background: 'linear-gradient(135deg, #C9A66B 0%, #E8C98A 50%, #C9A66B 100%)',
-                boxShadow: '0 0 48px rgba(201,166,107,0.4)',
-              }}
+              className="w-16 h-16 flex items-center justify-center mb-6"
             >
-              <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
-                <path d="M22 6C22 6 8 12 8 22C8 32 15 38 22 38C29 38 36 32 36 22C36 12 22 6 22 6Z"
-                  fill="rgba(10,37,64,0.15)" />
-                <path d="M19 14H25V19H30V25H25V30H19V25H14V19H19V14Z" fill="#0A2540" />
-              </svg>
+              <img src={import.meta.env.BASE_URL + 'logo.png'} alt="Logo" className="w-full h-full object-contain" />
             </motion.div>
 
             {/* Text */}
@@ -51,7 +43,7 @@ export default function PageLoader() {
                 transition={{ delay: 0.5, duration: 0.6 }}
                 className="text-white font-heading text-3xl font-bold tracking-wide"
               >
-                OrthoCare<span style={{ color: '#C9A66B' }}> Elite</span>
+                Ortho<span style={{ color: '#C9A66B' }}>3Trio</span>
               </motion.p>
               <motion.p
                 initial={{ opacity: 0 }}
