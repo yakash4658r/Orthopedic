@@ -8,7 +8,7 @@ import { LOCATIONS, DOCTORS } from '../constants/data';
 
 export default function Contact() {
   const navigate = useNavigate();
-  const [form, setForm] = useState({ name: '', phone: '', email: '', doctor: '', message: '' });
+  const [form, setForm] = useState({ name: '', age: '', phone: '', email: '', doctor: '', location: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -74,26 +74,41 @@ export default function Contact() {
                 </motion.div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
-                  <div className="grid sm:grid-cols-2 gap-4">
-                    <div>
+                  <div className="grid sm:grid-cols-3 gap-4">
+                    <div className="sm:col-span-2">
                       <label className="block text-xs font-semibold text-[#0A2540] mb-1.5">Full Name *</label>
                       <input name="name" value={form.name} onChange={handleChange} required placeholder="Your full name" className="input-premium" />
                     </div>
                     <div>
+                      <label className="block text-xs font-semibold text-[#0A2540] mb-1.5">Age *</label>
+                      <input name="age" value={form.age} onChange={handleChange} required type="number" placeholder="e.g. 34" className="input-premium" />
+                    </div>
+                  </div>
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    <div>
                       <label className="block text-xs font-semibold text-[#0A2540] mb-1.5">Phone Number *</label>
                       <input name="phone" value={form.phone} onChange={handleChange} required placeholder="+91 XXXXX XXXXX" className="input-premium" />
                     </div>
+                    <div>
+                      <label className="block text-xs font-semibold text-[#0A2540] mb-1.5">Email Address</label>
+                      <input name="email" value={form.email} onChange={handleChange} type="email" placeholder="your@email.com" className="input-premium" />
+                    </div>
                   </div>
-                  <div>
-                    <label className="block text-xs font-semibold text-[#0A2540] mb-1.5">Email Address</label>
-                    <input name="email" value={form.email} onChange={handleChange} type="email" placeholder="your@email.com" className="input-premium" />
-                  </div>
-                  <div>
-                    <label className="block text-xs font-semibold text-[#0A2540] mb-1.5">Preferred Doctor</label>
-                    <select name="doctor" value={form.doctor} onChange={handleChange} className="input-premium">
-                      <option value="">Select a specialist (optional)</option>
-                      {DOCTORS.map(d => <option key={d.id} value={d.name}>{d.name} — {d.subspecialty}</option>)}
-                    </select>
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-xs font-semibold text-[#0A2540] mb-1.5">Preferred Doctor</label>
+                      <select name="doctor" value={form.doctor} onChange={handleChange} className="input-premium">
+                        <option value="">Not Sure — Help Me Choose</option>
+                        {DOCTORS.map(d => <option key={d.id} value={d.name}>{d.name}</option>)}
+                      </select>
+                    </div>
+                    <div>
+                      <label className="block text-xs font-semibold text-[#0A2540] mb-1.5">Preferred Location</label>
+                      <select name="location" value={form.location} onChange={handleChange} className="input-premium">
+                        <option value="">Select a location (optional)</option>
+                        {LOCATIONS.map(loc => <option key={loc.id} value={loc.name}>{loc.name}</option>)}
+                      </select>
+                    </div>
                   </div>
                   <div>
                     <label className="block text-xs font-semibold text-[#0A2540] mb-1.5">Message / Your Condition</label>
@@ -202,29 +217,29 @@ export default function Contact() {
                     <tr className="border-b border-[#e8edf2] hover:bg-white/50 transition-colors">
                       <td className="px-6 py-5 align-top font-semibold text-[#0A2540] whitespace-nowrap" rowSpan={2}>Dr. Prakash Ayyadurai</td>
                       <td className="px-6 py-3 font-medium text-[#00A99D]">Rela Hospital, Chromepet</td>
-                      <td className="px-6 py-3">Mon, Wed, Fri (10:00 AM - 1:00 PM)</td>
+                      <td className="px-6 py-3">Mon–Sat (9:30 AM – 4:00 PM)</td>
                     </tr>
                     <tr className="border-b border-[#e8edf2] hover:bg-white/50 transition-colors">
-                      <td className="px-6 py-3 font-medium text-[#00A99D]">Sudar Hospital, Tambaram</td>
-                      <td className="px-6 py-3">Tue, Thu, Sat (5:00 PM - 8:00 PM)</td>
+                      <td className="px-6 py-3 font-medium text-[#00A99D]">NUO Clinic, Avadi</td>
+                      <td className="px-6 py-3">Monday (6:30 PM – 9:00 PM)</td>
                     </tr>
 
                     {/* Dr. Parthasarathy Srinivasan */}
                     <tr className="border-b border-[#e8edf2] hover:bg-white/50 transition-colors">
-                      <td className="px-6 py-5 align-top font-semibold text-[#0A2540] whitespace-nowrap" rowSpan={2}>Dr. Parthasarathy Srinivasan</td>
+                      <td className="px-6 py-5 align-top font-semibold text-[#0A2540] whitespace-nowrap">Dr. Parthasarathy Srinivasan</td>
                       <td className="px-6 py-3 font-medium text-[#00A99D]">Rela Hospital, Chromepet</td>
-                      <td className="px-6 py-3">Mon to Sat (9:00 AM - 4:00 PM)</td>
-                    </tr>
-                    <tr className="border-b border-[#e8edf2] hover:bg-white/50 transition-colors">
-                      <td className="px-6 py-3 font-medium text-[#00A99D]">Apollo Spectra, Alwarpet</td>
-                      <td className="px-6 py-3">Mon, Wed, Fri (5:00 PM - 7:00 PM)</td>
+                      <td className="px-6 py-3">Mon–Sat (9:00 AM - 4:00 PM)</td>
                     </tr>
 
                     {/* Dr. Ashok S. Gavaskar */}
+                    <tr className="border-b border-[#e8edf2] hover:bg-white/50 transition-colors">
+                      <td className="px-6 py-5 align-top font-semibold text-[#0A2540] whitespace-nowrap" rowSpan={2}>Dr. Ashok S. Gavaskar</td>
+                      <td className="px-6 py-3 font-medium text-[#00A99D]">Rela Hospital, Chromepet</td>
+                      <td className="px-6 py-3">Mon–Sat (10:00 AM – 4:00 PM)</td>
+                    </tr>
                     <tr className="hover:bg-white/50 transition-colors">
-                      <td className="px-6 py-5 align-top font-semibold text-[#0A2540] whitespace-nowrap">Dr. Ashok S. Gavaskar</td>
-                      <td className="px-6 py-5 font-medium text-[#00A99D]">Rela Hospital, Chromepet</td>
-                      <td className="px-6 py-5">Mon to Sat (10:00 AM - 5:00 PM)</td>
+                      <td className="px-6 py-3 font-medium text-[#00A99D]">Sunil's Orthoworld, Anna Nagar</td>
+                      <td className="px-6 py-3">Mon–Sat (5:00 PM – 8:00 PM)</td>
                     </tr>
                   </tbody>
                 </table>
