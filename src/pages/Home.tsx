@@ -169,7 +169,7 @@ export default function Home() {
             <AnimateIn direction="left">
               <div className="relative">
                 <div className="rounded-3xl overflow-hidden shadow-premium" style={{ border: '3px solid rgba(201,166,107,0.25)', aspectRatio: '4/5' }}>
-                  <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&q=80" alt="OrthoCare Elite" className="w-full h-full object-cover" />
+                  <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&q=80" alt="Ortho3Trio" className="w-full h-full object-cover" />
                 </div>
                 <motion.div
                   className="absolute -bottom-6 -right-4 bg-white rounded-2xl p-5 shadow-card-hover"
@@ -761,7 +761,7 @@ export default function Home() {
               Frequently Asked <span className="gradient-text">Questions</span>
             </h2>
             <p className="text-[#8A9BB0] max-w-lg mx-auto text-sm">
-              Everything you need to know about insurances, recovery timelines, and consulting at OrthoCare Elite.
+              Everything you need to know about insurances, recovery timelines, and consulting at Ortho3Trio.
             </p>
           </AnimateIn>
 

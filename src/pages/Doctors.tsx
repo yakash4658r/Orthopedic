@@ -44,7 +44,7 @@ export default function Doctors() {
       <section className="py-14 px-6 lg:px-10 max-w-7xl mx-auto text-center">
         <AnimateIn>
           <p className="text-[#8A9BB0] text-base leading-relaxed max-w-2xl mx-auto">
-            Every physician at OrthoCare Elite is selected for their fellowship training, subspecialty depth, and genuine commitment to patient-first care. Together, they bring over 60 years of combined clinical experience across Chennai and the world's leading orthopaedic institutions.
+            Every physician at Ortho3Trio is selected for their fellowship training, subspecialty depth, and genuine commitment to patient-first care. Together, they bring over 60 years of combined clinical experience across Chennai and the world's leading orthopaedic institutions.
           </p>
         </AnimateIn>
       </section>
@@ -143,7 +143,7 @@ export default function Doctors() {
         <div className="max-w-7xl mx-auto">
           <AnimateIn className="text-center mb-12">
             <div className="flex justify-center mb-4"><div className="section-line" /></div>
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-[#0A2540] mb-3">Why OrthoCare Elite Physicians</h2>
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-[#0A2540] mb-3">Why Ortho3Trio Physicians</h2>
           </AnimateIn>
           <StaggerChildren className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[

@@ -55,7 +55,7 @@ export default function Testimonials() {
               Patient<br />
               <span className="teal-gradient-text">Stories</span>
             </h1>
-            <p className="text-white/60 text-lg max-w-xl">Real outcomes, real lives transformed — from the patients of OrthoCare Elite, Chennai.</p>
+            <p className="text-white/60 text-lg max-w-xl">Real outcomes, real lives transformed — from the patients of Ortho3Trio, Chennai.</p>
           </AnimateIn>
         </div>
       </section>
@@ -117,7 +117,7 @@ export default function Testimonials() {
           <AnimateIn className="text-center mb-14">
             <div className="flex justify-center mb-4"><div className="section-line" /></div>
             <h2 className="font-heading text-4xl font-bold text-[#0A2540] mb-3">Featured Stories</h2>
-            <p className="text-[#8A9BB0] max-w-lg mx-auto">In-depth experiences from patients who chose OrthoCare Elite, Chennai.</p>
+            <p className="text-[#8A9BB0] max-w-lg mx-auto">In-depth experiences from patients who chose Ortho3Trio, Chennai.</p>
           </AnimateIn>
           <StaggerChildren className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {TESTIMONIALS.map(t => (

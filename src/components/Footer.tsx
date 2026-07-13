@@ -154,7 +154,7 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="border-t border-white/8 px-6 lg:px-10 py-5 max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/25">
-        <p>© {new Date().getFullYear()} OrthoCare Elite, Chennai. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Ortho3Trio, Chennai. All rights reserved.</p>
         <div className="flex gap-5">
           {['Privacy Policy', 'Terms of Service', 'Medical Disclaimer'].map(t => (
             <a key={t} href="#" className="hover:text-[#C9A66B] transition-colors">{t}</a>

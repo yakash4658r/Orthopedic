@@ -34,7 +34,7 @@ export default function About() {
       {/* Hero */}
       <section className="relative min-h-[60vh] flex items-end overflow-hidden">
         <div className="absolute inset-0">
-          <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=1600&q=80" alt="OrthoCare Elite" className="w-full h-full object-cover" />
+          <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=1600&q=80" alt="Ortho3Trio" className="w-full h-full object-cover" />
         </div>
         <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(10,37,64,0.95) 0%, rgba(10,37,64,0.5) 60%, rgba(10,37,64,0.2) 100%)' }} />
         <div className="relative max-w-7xl mx-auto px-6 lg:px-10 pb-20 pt-40 w-full">
@@ -65,7 +65,7 @@ export default function About() {
           <AnimateIn direction="left" className="lg:col-span-5">
             <div className="relative">
               <div className="rounded-3xl overflow-hidden shadow-premium" style={{ border: '3px solid rgba(201,166,107,0.25)', aspectRatio: '4/5' }}>
-                <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=800&q=80" alt="OrthoCare Elite Clinic" className="w-full h-full object-cover" />
+                <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=800&q=80" alt="Ortho3Trio Clinic" className="w-full h-full object-cover" />
               </div>
               <motion.div
                 className="absolute -bottom-8 -right-6 bg-white rounded-2xl p-5 shadow-card-hover"

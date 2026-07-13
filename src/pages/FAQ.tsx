@@ -62,7 +62,7 @@ export default function FAQ() {
               Frequently<br />
               <span className="gradient-text">Asked Questions</span>
             </h1>
-            <p className="text-white/60 text-lg max-w-xl">Everything you need to know before your visit to OrthoCare Elite, Chennai.</p>
+            <p className="text-white/60 text-lg max-w-xl">Everything you need to know before your visit to Ortho3Trio, Chennai.</p>
           </AnimateIn>
         </div>
       </section>
@@ -94,7 +94,7 @@ export default function FAQ() {
             <div className="rounded-2xl overflow-hidden shadow-premium mb-6" style={{ border: '2px solid rgba(201,166,107,0.2)' }}>
               <img
                 src="https://images.unsplash.com/photo-1559757175-5700dde675bc?w=600&q=80"
-                alt="OrthoCare Elite FAQ"
+                alt="Ortho3Trio FAQ"
                 className="w-full object-cover"
                 style={{ maxHeight: 240 }}
               />

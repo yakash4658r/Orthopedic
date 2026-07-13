@@ -314,24 +314,34 @@ export const GALLERY_ITEMS = [
 export const LOCATIONS = [
   {
     id: 1,
-    name: 'Ortho3Trio — Anna Nagar (Main Clinic)',
-    address: 'AG-63, River View Colony, Anna Nagar, Chennai - 600040',
+    name: 'Dr. Rela Institute & Medical Centre',
+    address: 'No. 7, CLC Works Road, Chromepet, Chennai - 600044',
     phone: '+91 94448 53737',
-    email: 'care@orthocareelite.com',
-    hours: 'Mon–Sat: 9:00 AM – 8:00 PM',
-    mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.0!2d80.2!3d13.08!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sAnna+Nagar+Chennai!5e0!3m2!1sen!2sin!4v1234567890',
-    directions: 'https://goo.gl/maps/annanagar',
-  },
-  {
-    id: 2,
-    name: 'Ortho3Trio — Chromepet',
-    address: 'No.7, CLC Works Road, Chromepet, Chennai - 600044',
-    phone: '+91 94448 53737',
-    email: 'care@orthocareelite.com',
+    email: 'care@ortho3trio.com',
     hours: 'Mon–Sat: 9:00 AM – 8:00 PM',
     mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.5!2d80.14!3d12.95!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sChromepet+Chennai!5e0!3m2!1sen!2sin!4v1234567891',
     directions: 'https://goo.gl/maps/chromepet',
   },
+  {
+    id: 2,
+    name: 'Sunil\'s Orthoworld',
+    address: 'Anna Nagar, Chennai',
+    phone: '+91 94448 53737',
+    email: 'care@ortho3trio.com',
+    hours: 'Mon–Sat: 5:00 PM – 8:00 PM',
+    mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.0!2d80.2!3d13.08!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sAnna+Nagar+Chennai!5e0!3m2!1sen!2sin!4v1234567890',
+    directions: 'https://goo.gl/maps/annanagar',
+  },
+  {
+    id: 3,
+    name: 'NUO Clinic',
+    address: 'Avadi, Chennai',
+    phone: '+91 94448 53737',
+    email: 'care@ortho3trio.com',
+    hours: 'Monday: 6:30 PM – 9:00 PM',
+    mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.5!2d80.14!3d12.95!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sChromepet+Chennai!5e0!3m2!1sen!2sin!4v1234567891',
+    directions: 'https://goo.gl/maps/avadi',
+  }
 ];
 
 // ─── ABOUT TIMELINE ───────────────────────────────────────────────
