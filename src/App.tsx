@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import Layout from './components/Layout';
 import ScrollProgress from './components/ScrollProgress';
@@ -38,11 +38,11 @@ function AnimatedRoutes() {
 
 export default function App() {
   return (
-    <BrowserRouter basename={import.meta.env.BASE_URL}>
+    <HashRouter>
       <ScrollProgress />
       <BackToTop />
       <AnimatedRoutes />
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
