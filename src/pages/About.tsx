@@ -1,11 +1,11 @@
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ChevronRight, Star } from 'lucide-react';
+import { ChevronRight, Star, Award, CheckCircle, GraduationCap } from 'lucide-react';
 import { useInView } from 'react-intersection-observer';
 import { useEffect, useState } from 'react';
 import PageTransition from '../components/PageTransition';
 import AnimateIn, { StaggerChildren, FadeItem } from '../components/AnimateIn';
-import { STATS, ABOUT, TIMELINE } from '../constants/data';
+import { STATS, ABOUT, DOCTORS } from '../constants/data';
 import LucideIcon from '../components/LucideIcon';
 
 function Counter({ end, suffix }: { end: number; suffix: string }) {
@@ -42,7 +42,7 @@ export default function About() {
             <div className="section-line mb-6" />
             <h1 className="font-heading text-5xl md:text-6xl font-bold text-white mb-4 leading-tight">
               About<br />
-              <span className="gradient-text">OrthoCare Elite</span>
+              <span className="gradient-text">Ortho3Trio</span>
             </h1>
             <p className="text-white/60 text-lg max-w-xl">Chennai's premier multi-specialty orthopaedic destination — 15+ years of surgical excellence.</p>
           </AnimateIn>
@@ -91,7 +91,7 @@ export default function About() {
 
           {/* Text col — 7 */}
           <AnimateIn direction="right" delay={0.15} className="lg:col-span-7">
-            <p className="text-xs font-bold tracking-widest uppercase mb-2" style={{ color: '#00A99D' }}>About OrthoCare Elite</p>
+            <p className="text-xs font-bold tracking-widest uppercase mb-2" style={{ color: '#00A99D' }}>About Ortho3Trio</p>
             <div className="section-line mb-6" />
             <h2 className="font-heading text-4xl md:text-5xl font-bold text-[#0A2540] mb-6 leading-tight">
               Where Compassionate Care Meets<br />
@@ -135,33 +135,88 @@ export default function About() {
         </div>
       </section>
 
-      {/* Timeline */}
+      {/* What Makes Us Different */}
       <section className="py-24 px-6 lg:px-10 bg-[#F4F6F8]">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <AnimateIn className="text-center mb-14">
             <div className="flex justify-center mb-4"><div className="section-line" /></div>
-            <h2 className="font-heading text-4xl font-bold text-[#0A2540] mb-3">Our Journey</h2>
-            <p className="text-[#8A9BB0] max-w-lg mx-auto">15+ years of milestones in Chennai's orthopaedic care.</p>
+            <h2 className="font-heading text-4xl font-bold text-[#0A2540] mb-3">What Makes Us Different</h2>
+            <p className="text-[#8A9BB0] max-w-lg mx-auto">A model of care designed entirely around the patient's exact needs.</p>
           </AnimateIn>
-          <div className="relative">
-            <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-[2px] hidden lg:block" style={{ background: 'linear-gradient(to bottom, #C9A66B, #00A99D)' }} />
-            <div className="space-y-8">
-              {TIMELINE.map((item, i) => (
-                <AnimateIn key={item.year} delay={i * 0.08} direction={i % 2 === 0 ? 'left' : 'right'}>
-                  <div className={`flex items-center gap-8 ${i % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}>
-                    <div className="flex-1">
-                      <div className="bg-white rounded-2xl p-6 shadow-premium" style={{ border: '1px solid rgba(10,37,64,0.06)' }}>
-                        <div className="text-xs font-bold tracking-widest mb-2 uppercase" style={{ color: '#00A99D' }}>{item.year}</div>
-                        <h3 className="font-heading text-lg font-bold text-[#0A2540] mb-1">{item.title}</h3>
-                        <p className="text-[#8A9BB0] text-sm leading-relaxed">{item.desc}</p>
+          <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-6">
+            {ABOUT.whyChooseUs.map((item, i) => (
+              <AnimateIn key={item.title} delay={i * 0.1}>
+                <div className="bg-white rounded-2xl p-6 shadow-premium h-full" style={{ border: '1px solid rgba(10,37,64,0.06)' }}>
+                  <div className="mb-4 text-[#C9A66B]">
+                    <LucideIcon name={item.icon} size={28} />
+                  </div>
+                  <h3 className="font-heading text-lg font-bold text-[#0A2540] mb-2">{item.title}</h3>
+                  <p className="text-[#8A9BB0] text-sm leading-relaxed">{item.desc}</p>
+                </div>
+              </AnimateIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Our Specialists / Doctor Bios */}
+      <section className="py-24 px-6 lg:px-10 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <AnimateIn className="text-center mb-14">
+            <div className="flex justify-center mb-4"><div className="section-line" /></div>
+            <h2 className="font-heading text-4xl font-bold text-[#0A2540] mb-3">Our Three Specialists</h2>
+            <p className="text-[#8A9BB0] max-w-lg mx-auto">True sub-specialisation. Meet the experts behind Ortho3Trio.</p>
+          </AnimateIn>
+          <div className="space-y-16">
+            {DOCTORS.map((doc, i) => (
+              <AnimateIn key={doc.id} delay={i * 0.1}>
+                <div className="grid lg:grid-cols-3 gap-8 items-start bg-white rounded-3xl p-8 shadow-premium" style={{ border: '1px solid rgba(201,166,107,0.2)' }}>
+                  {/* Photo */}
+                  <div className="lg:col-span-1 rounded-2xl overflow-hidden shadow-premium h-80 relative" style={{ border: '1px solid rgba(10,37,64,0.06)' }}>
+                    <img src={doc.image} alt={doc.name} className="w-full h-full object-cover object-top" />
+                    <div className="absolute top-4 right-4 z-10 px-3 py-1 rounded-full text-[10px] font-semibold bg-white/90 text-[#00A99D] shadow-sm backdrop-blur">
+                      {doc.subspecialty}
+                    </div>
+                  </div>
+                  {/* Bio & Info */}
+                  <div className="lg:col-span-2 flex flex-col h-full">
+                    <h3 className="font-heading text-3xl font-bold text-[#0A2540] mb-1">{doc.name}</h3>
+                    <p className="text-[#C9A66B] text-sm font-semibold mb-2">{doc.credentials}</p>
+                    <p className="text-[#8A9BB0] text-sm font-medium mb-4">{doc.designation}</p>
+                    
+                    <p className="text-[#8A9BB0] text-sm leading-relaxed mb-6">{doc.bio}</p>
+                    
+                    <div className="grid sm:grid-cols-2 gap-6 mt-auto">
+                      <div>
+                        <div className="flex items-center gap-1.5 mb-3 text-[#0A2540]">
+                          <Star size={16} className="text-[#C9A66B]" />
+                          <h4 className="font-heading text-sm font-bold uppercase tracking-wide">Key Focus Areas</h4>
+                        </div>
+                        <p className="text-xs text-[#8A9BB0] leading-relaxed">{doc.specialty}</p>
+                      </div>
+                      <div>
+                        <div className="flex items-center gap-1.5 mb-3 text-[#0A2540]">
+                          <Award size={16} className="text-[#C9A66B]" />
+                          <h4 className="font-heading text-sm font-bold uppercase tracking-wide">Achievements</h4>
+                        </div>
+                        <ul className="space-y-1.5">
+                          {doc.achievements.map((achieve, idx) => (
+                            <li key={idx} className="flex items-start gap-1.5 text-xs text-[#8A9BB0] leading-snug">
+                              <CheckCircle size={12} className="mt-0.5 shrink-0 text-[#00A99D]" />
+                              {achieve}
+                            </li>
+                          ))}
+                        </ul>
                       </div>
                     </div>
-                    <div className="hidden lg:flex w-5 h-5 rounded-full border-4 border-white z-10 shrink-0" style={{ background: '#C9A66B', boxShadow: '0 0 12px rgba(201,166,107,0.5)' }} />
-                    <div className="flex-1 hidden lg:block" />
+                    
+                    <div className="mt-8 pt-4 border-t border-[#f0f3f7] flex items-center gap-2 text-xs text-[#8A9BB0]">
+                      <GraduationCap size={16} className="text-[#C9A66B]" /> {doc.note}
+                    </div>
                   </div>
-                </AnimateIn>
-              ))}
-            </div>
+                </div>
+              </AnimateIn>
+            ))}
           </div>
         </div>
       </section>

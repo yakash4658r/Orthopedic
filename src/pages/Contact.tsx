@@ -34,7 +34,7 @@ export default function Contact() {
               Get In<br />
               <span className="gradient-text">Touch</span>
             </h1>
-            <p className="text-white/60 text-lg max-w-xl">Book an appointment or send us a message — we'll respond within a few hours.</p>
+            <p className="text-white/60 text-lg max-w-xl">Whether you need a second opinion, a sports injury assessment, or a surgical consult, our team is ready to help.</p>
           </AnimateIn>
         </div>
       </section>
@@ -172,6 +172,62 @@ export default function Contact() {
                   <Star size={14} fill="#C9A66B" /> 4.9/5 Rating
                 </div>
                 <p className="text-white/60 text-sm">Rated by 500+ patients on Google and Practo. Open Monday to Saturday, 9AM to 8PM at both locations.</p>
+              </div>
+            </div>
+          </AnimateIn>
+        </div>
+      </section>
+
+      {/* Doctor-wise Timings */}
+      <section className="py-24 px-6 lg:px-10 bg-white border-t border-[#e8edf2]">
+        <div className="max-w-5xl mx-auto">
+          <AnimateIn className="text-center mb-12">
+            <h2 className="font-heading text-3xl font-bold text-[#0A2540] mb-3">Consultation Timings</h2>
+            <p className="text-[#8A9BB0]">Find out when our specialists are available across different facilities.</p>
+          </AnimateIn>
+          
+          <AnimateIn delay={0.1}>
+            <div className="bg-[#F4F6F8] rounded-3xl p-2 shadow-premium" style={{ border: '1px solid rgba(10,37,64,0.06)' }}>
+              <div className="overflow-x-auto">
+                <table className="w-full text-left border-collapse">
+                  <thead>
+                    <tr className="border-b border-[#e8edf2]">
+                      <th className="px-6 py-4 font-heading font-bold text-[#0A2540] whitespace-nowrap">Specialist</th>
+                      <th className="px-6 py-4 font-heading font-bold text-[#0A2540]">Clinic / Hospital</th>
+                      <th className="px-6 py-4 font-heading font-bold text-[#0A2540] whitespace-nowrap">Days & Timings</th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-sm text-[#8A9BB0]">
+                    {/* Dr. Prakash Ayyadurai */}
+                    <tr className="border-b border-[#e8edf2] hover:bg-white/50 transition-colors">
+                      <td className="px-6 py-5 align-top font-semibold text-[#0A2540] whitespace-nowrap" rowSpan={2}>Dr. Prakash Ayyadurai</td>
+                      <td className="px-6 py-3 font-medium text-[#00A99D]">Rela Hospital, Chromepet</td>
+                      <td className="px-6 py-3">Mon, Wed, Fri (10:00 AM - 1:00 PM)</td>
+                    </tr>
+                    <tr className="border-b border-[#e8edf2] hover:bg-white/50 transition-colors">
+                      <td className="px-6 py-3 font-medium text-[#00A99D]">Sudar Hospital, Tambaram</td>
+                      <td className="px-6 py-3">Tue, Thu, Sat (5:00 PM - 8:00 PM)</td>
+                    </tr>
+
+                    {/* Dr. Parthasarathy Srinivasan */}
+                    <tr className="border-b border-[#e8edf2] hover:bg-white/50 transition-colors">
+                      <td className="px-6 py-5 align-top font-semibold text-[#0A2540] whitespace-nowrap" rowSpan={2}>Dr. Parthasarathy Srinivasan</td>
+                      <td className="px-6 py-3 font-medium text-[#00A99D]">Rela Hospital, Chromepet</td>
+                      <td className="px-6 py-3">Mon to Sat (9:00 AM - 4:00 PM)</td>
+                    </tr>
+                    <tr className="border-b border-[#e8edf2] hover:bg-white/50 transition-colors">
+                      <td className="px-6 py-3 font-medium text-[#00A99D]">Apollo Spectra, Alwarpet</td>
+                      <td className="px-6 py-3">Mon, Wed, Fri (5:00 PM - 7:00 PM)</td>
+                    </tr>
+
+                    {/* Dr. Ashok S. Gavaskar */}
+                    <tr className="hover:bg-white/50 transition-colors">
+                      <td className="px-6 py-5 align-top font-semibold text-[#0A2540] whitespace-nowrap">Dr. Ashok S. Gavaskar</td>
+                      <td className="px-6 py-5 font-medium text-[#00A99D]">Rela Hospital, Chromepet</td>
+                      <td className="px-6 py-5">Mon to Sat (10:00 AM - 5:00 PM)</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           </AnimateIn>

@@ -10,13 +10,13 @@ import LucideIcon from '../components/LucideIcon';
 type Tab = 'Ortho' | 'Spine' | 'Sports';
 
 const TABS: { key: Tab; label: string; icon: string; doctor: string }[] = [
-  { key: 'Ortho', label: 'Orthopaedic Surgery', icon: 'Shield', doctor: 'Dr. Ashok S. Gavaskar' },
-  { key: 'Spine', label: 'Spine Surgery', icon: 'Dna', doctor: 'Dr. Parthasarathy Srinivasan' },
-  { key: 'Sports', label: 'Ligament & Sports', icon: 'Activity', doctor: 'Dr. Prakash Ayyadurai' },
+  { key: 'Sports', label: 'Sports Injury & Arthroscopy', icon: 'Activity', doctor: 'Dr. Prakash Ayyadurai' },
+  { key: 'Spine', label: 'Spine Care & Surgery', icon: 'Dna', doctor: 'Dr. Parthasarathy Srinivasan' },
+  { key: 'Ortho', label: 'Joint Replacement & Trauma', icon: 'Shield', doctor: 'Dr. Ashok S. Gavaskar' },
 ];
 
 export default function Services() {
-  const [activeTab, setActiveTab] = useState<Tab>('Ortho');
+  const [activeTab, setActiveTab] = useState<Tab>('Sports');
   const navigate = useNavigate();
   const filtered = SERVICES.filter(s => s.category === activeTab);
   const activeTabData = TABS.find(t => t.key === activeTab)!;
@@ -132,22 +132,34 @@ export default function Services() {
         </div>
       </section>
 
-      {/* Feature strip */}
-      <section className="py-20 px-6 lg:px-10" style={{ background: '#0A2540' }}>
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-3 gap-8">
-          {[
-            { icon: '🔬', title: 'Minimally Invasive First', desc: 'Keyhole techniques for all eligible procedures — less pain, faster recovery, smaller scars.' },
-            { icon: '⚡', title: 'Same-Week Consultations', desc: 'Fast-tracked appointments. No months-long waiting lists at either of our Chennai clinics.' },
-            { icon: '🏠', title: 'Complete Post-Op Care', desc: 'In-house physiotherapy and structured recovery from day 1 — we stay with you through recovery.' },
-          ].map(item => (
-            <AnimateIn key={item.title}>
-              <div className="rounded-2xl p-8" style={{ border: '1px solid rgba(255,255,255,0.08)' }}>
-                <div className="text-3xl mb-4">{item.icon}</div>
-                <h3 className="font-heading text-lg font-bold text-white mb-2">{item.title}</h3>
-                <p className="text-white/50 text-sm leading-relaxed">{item.desc}</p>
+      {/* Cross-Specialty Cases */}
+      <section className="py-24 px-6 lg:px-10" style={{ background: '#0A2540' }}>
+        <div className="max-w-4xl mx-auto text-center">
+          <AnimateIn>
+            <h2 className="font-heading text-4xl font-bold text-white mb-6">
+              When Injuries Overlap, <span style={{ color: '#C9A66B' }}>So Do Our Surgeons.</span>
+            </h2>
+            <p className="text-white/80 text-lg leading-relaxed mb-10">
+              Complex trauma or multi-joint arthritis doesn't always fit into one box. Because our three specialists operate out of the same facility, complex cases are reviewed jointly. You get a team approach without having to travel between different clinics.
+            </p>
+            <div className="grid sm:grid-cols-3 gap-6">
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="text-3xl mb-3">🤝</div>
+                <h4 className="font-heading font-bold text-white mb-2">Joint Review</h4>
+                <p className="text-white/60 text-sm">Complex cases are evaluated by multiple experts.</p>
               </div>
-            </AnimateIn>
-          ))}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="text-3xl mb-3">🏥</div>
+                <h4 className="font-heading font-bold text-white mb-2">One Facility</h4>
+                <p className="text-white/60 text-sm">No need to travel between different hospitals.</p>
+              </div>
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="text-3xl mb-3">⚡</div>
+                <h4 className="font-heading font-bold text-white mb-2">Unified Plan</h4>
+                <p className="text-white/60 text-sm">A single, cohesive treatment plan for faster recovery.</p>
+              </div>
+            </div>
+          </AnimateIn>
         </div>
       </section>
 

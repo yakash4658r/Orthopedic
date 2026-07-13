@@ -198,22 +198,22 @@ export default function Home() {
 
             {/* Text */}
             <AnimateIn direction="right" delay={0.1}>
-              <p className="text-xs font-bold tracking-widest uppercase mb-2" style={{ color: '#00A99D' }}>About OrthoCare Elite</p>
+              <p className="text-xs font-bold tracking-widest uppercase mb-2" style={{ color: '#00A99D' }}>Why Ortho3Trio</p>
               <div className="section-line mb-6" />
               <h2 className="font-heading text-4xl md:text-5xl font-bold text-[#0A2540] mb-6 leading-tight">
-                Where Compassionate Care Meets<br />
-                <span className="gradient-text">Surgical Precision</span>
+                One Roof. Every Joint.<br />
+                <span className="gradient-text">No Guesswork.</span>
               </h2>
-              <p className="text-[#8A9BB0] text-base leading-relaxed mb-5">{ABOUT.story}</p>
-              <p className="text-[#8A9BB0] text-base leading-relaxed mb-8">{ABOUT.para2}</p>
+              <p className="text-[#8A9BB0] text-base leading-relaxed mb-5">Most orthopaedic visits start with a guessing game—is this a spine problem, a ligament problem, or a joint problem?</p>
+              <p className="text-[#8A9BB0] text-base leading-relaxed mb-8">Ortho3Trio removes that guesswork. By bringing together three leading sub-specialists under one roof, we ensure you get the exact expertise you need, right from day one.</p>
 
               {/* 4 mini stats */}
               <div className="grid grid-cols-2 gap-4 mb-8">
                 {[
-                  { val: '5000+', label: 'Surgeries Performed' },
-                  { val: '15+', label: 'Years Experience' },
-                  { val: '1500+', label: 'Spine Surgeries' },
-                  { val: '98%', label: 'Success Rate' },
+                  { val: '35+', label: 'Years Combined Experience' },
+                  { val: '3', label: 'Super-Specialists' },
+                  { val: '7000+', label: 'Successful Surgeries' },
+                  { val: '1', label: 'Unified Clinic Ecosystem' },
                 ].map(s => (
                   <div key={s.label} className="bg-[#F4F6F8] rounded-xl p-4 text-center shadow-premium" style={{ border: '1px solid rgba(10,37,64,0.06)' }}>
                     <div className="font-heading text-2xl font-bold text-[#0A2540] mb-1">{s.val}</div>
@@ -223,28 +223,34 @@ export default function Home() {
               </div>
 
               <div className="flex gap-4 flex-wrap">
-                <button onClick={() => navigate('/about')} className="btn-gold px-6 py-3 rounded-xl text-sm font-semibold">Read Full About Us</button>
+                <button onClick={() => navigate('/about')} className="btn-gold px-6 py-3 rounded-xl text-sm font-semibold">Read Our Story</button>
                 <a href="#booking-form-section" className="btn-outline-gold px-6 py-3 rounded-xl text-sm text-center">Book Appointment</a>
               </div>
             </AnimateIn>
           </div>
 
-          {/* Timeline - Journey */}
+          {/* Journey */}
           <div className="mb-24 pt-12 border-t border-[#f0f3f7]">
             <AnimateIn className="text-center mb-14">
               <div className="flex justify-center mb-4"><div className="section-line" /></div>
-              <h3 className="font-heading text-3xl font-bold text-[#0A2540] mb-3">Our Milestone Journey</h3>
-              <p className="text-[#8A9BB0] max-w-lg mx-auto">15+ years of clinical and surgical milestones in Chennai's orthopaedic landscape.</p>
+              <h3 className="font-heading text-3xl font-bold text-[#0A2540] mb-3">Your Journey With Us</h3>
+              <p className="text-[#8A9BB0] max-w-lg mx-auto">From pain to performance in 5 structured steps.</p>
             </AnimateIn>
             <div className="relative max-w-5xl mx-auto">
               <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-[2px] hidden lg:block" style={{ background: 'linear-gradient(to bottom, #C9A66B, #00A99D)' }} />
               <div className="space-y-8">
-                {TIMELINE.map((item, i) => (
-                  <AnimateIn key={item.year} delay={i * 0.08} direction={i % 2 === 0 ? 'left' : 'right'}>
+                {[
+                  { step: '1', title: 'Consult', desc: 'Detailed sub-specialist assessment.' },
+                  { step: '2', title: 'Diagnose', desc: 'Precision imaging and biomechanical analysis.' },
+                  { step: '3', title: 'Plan', desc: 'Customized conservative or surgical roadmap.' },
+                  { step: '4', title: 'Treat', desc: 'Evidence-based intervention.' },
+                  { step: '5', title: 'Recover', desc: 'Guided physiotherapy to full function.' }
+                ].map((item, i) => (
+                  <AnimateIn key={item.step} delay={i * 0.08} direction={i % 2 === 0 ? 'left' : 'right'}>
                     <div className={`flex items-center gap-8 ${i % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}>
                       <div className="flex-1">
                         <div className="bg-white rounded-2xl p-6 shadow-premium" style={{ border: '1.5px solid rgba(10,37,64,0.06)' }}>
-                          <div className="text-xs font-bold tracking-widest mb-2 uppercase" style={{ color: '#00A99D' }}>{item.year}</div>
+                          <div className="text-xs font-bold tracking-widest mb-2 uppercase" style={{ color: '#00A99D' }}>Step {item.step}</div>
                           <h4 className="font-heading text-lg font-bold text-[#0A2540] mb-1">{item.title}</h4>
                           <p className="text-[#8A9BB0] text-sm leading-relaxed">{item.desc}</p>
                         </div>
@@ -285,18 +291,26 @@ export default function Home() {
       </section>
 
       {/* ══════════════════════════════════════
-          3. STATS DARK STRIP
+          3. TRUST STRIP
       ══════════════════════════════════════ */}
       <section className="py-20 px-6 lg:px-10" style={{ background: '#0A2540' }}>
-        <div className="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-8">
-          {STATS.map((s, i) => (
-            <AnimateIn key={s.label} delay={i * 0.1} className="text-center">
-              <div className="font-heading text-5xl font-bold mb-2 gradient-text">
-                <Counter end={s.value} suffix={s.suffix} />
-              </div>
-              <div className="text-white/50 text-sm">{s.label}</div>
-            </AnimateIn>
-          ))}
+        <div className="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+          <AnimateIn delay={0.1} className="text-center">
+            <div className="font-heading text-4xl font-bold mb-2 gradient-text">35+</div>
+            <div className="text-white/50 text-sm">Years Combined Experience</div>
+          </AnimateIn>
+          <AnimateIn delay={0.2} className="text-center">
+            <div className="font-heading text-4xl font-bold mb-2 gradient-text">7000+</div>
+            <div className="text-white/50 text-sm">Successful Surgeries</div>
+          </AnimateIn>
+          <AnimateIn delay={0.3} className="text-center">
+            <div className="font-heading text-4xl font-bold mb-2 gradient-text">3</div>
+            <div className="text-white/50 text-sm">Super-Specialists, 1 Clinic</div>
+          </AnimateIn>
+          <AnimateIn delay={0.4} className="text-center">
+            <div className="font-heading text-4xl font-bold mb-2 gradient-text">1</div>
+            <div className="text-white/50 text-sm">Rela Hospital Ecosystem</div>
+          </AnimateIn>
         </div>
       </section>
 
@@ -405,7 +419,7 @@ export default function Home() {
           {/* Why Our Team Strip */}
           <div className="pt-12 border-t border-[#0A2540]/10">
             <AnimateIn className="text-center mb-12">
-              <h3 className="font-heading text-2xl font-bold text-[#0A2540] mb-3">Why Choose OrthoCare Elite Physicians?</h3>
+              <h3 className="font-heading text-2xl font-bold text-[#0A2540] mb-3">Why Choose Ortho3Trio Physicians?</h3>
             </AnimateIn>
             <StaggerChildren className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
@@ -1008,10 +1022,10 @@ export default function Home() {
         <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 50% 50%, #C9A66B 0%, transparent 65%)' }} />
         <AnimateIn className="relative">
           <h2 className="font-heading text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
-            Ready to Start Your <span className="gradient-text">Recovery?</span>
+            Don't Wait <span className="gradient-text">Out the Pain.</span>
           </h2>
           <p className="text-white/50 mb-8 max-w-md mx-auto leading-relaxed">
-            Book a consultation with Chennai's most trusted orthopaedic specialists today.
+            Whether it's a torn ligament, a worn-out knee, or a slipped disc—expert help is here. Talk to the Ortho3Trio team today.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a href="#booking-form-section" className="btn-gold px-10 py-4 rounded-xl text-base font-semibold">Book Appointment Now</a>
