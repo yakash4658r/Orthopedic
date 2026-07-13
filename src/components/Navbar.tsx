@@ -74,13 +74,9 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-[72px]">
 
           {/* Logo */}
-          <NavLink to="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
-              <img src={import.meta.env.BASE_URL + 'logo.png'} alt="Logo" className="w-full h-full object-contain" />
-            </div>
-            <div>
-              <span className="font-heading text-white text-xl font-bold tracking-wide leading-none">Ortho</span>
-              <span className="font-heading text-xl font-bold tracking-wide leading-none" style={{ color: '#C9A66B' }}>3Trio</span>
+          <NavLink to="/" className="flex items-center group">
+            <div className="h-10 sm:h-12 lg:h-14 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
+              <img src={import.meta.env.BASE_URL + 'logo.png'} alt="Ortho3Trio Logo" className="h-full w-auto object-contain" />
             </div>
           </NavLink>
 

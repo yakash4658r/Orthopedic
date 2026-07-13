@@ -30,9 +30,9 @@ export default function PageLoader() {
               initial={{ rotateY: 90 }}
               animate={{ rotateY: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-              className="w-16 h-16 flex items-center justify-center mb-6"
+              className="h-16 flex items-center justify-center mb-6"
             >
-              <img src={import.meta.env.BASE_URL + 'logo.png'} alt="Logo" className="w-full h-full object-contain" />
+              <img src={import.meta.env.BASE_URL + 'logo.png'} alt="Logo" className="h-full w-auto object-contain" />
             </motion.div>
 
             {/* Text */}

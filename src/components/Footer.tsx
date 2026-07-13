@@ -52,11 +52,10 @@ export default function Footer() {
 
         {/* Col 1 — Brand */}
         <div>
-          <div className="flex items-center gap-3 mb-4">
-            <div className="w-10 h-10 flex items-center justify-center">
-              <img src={import.meta.env.BASE_URL + 'logo.png'} alt="Ortho3Trio Logo" className="w-full h-full object-contain" />
+          <div className="flex items-center mb-6">
+            <div className="h-10 sm:h-12 flex items-center justify-center">
+              <img src={import.meta.env.BASE_URL + 'logo.png'} alt="Ortho3Trio Logo" className="h-full w-auto object-contain" />
             </div>
-            <span className="font-heading text-white text-xl font-bold">Ortho<span style={{ color: '#C9A66B' }}>3Trio</span></span>
           </div>
           <p className="text-white/40 text-sm leading-relaxed mb-5">
             Chennai's premier multi-specialty orthopaedic destination. Fellowship-trained surgeons. World-class outcomes.
