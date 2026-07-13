@@ -84,7 +84,7 @@ export default function About() {
                 animate={{ opacity: 1, rotate: 0 }}
                 transition={{ delay: 0.6, duration: 0.5 }}
               >
-                <div className="text-[#0A2540] font-bold text-xs text-center leading-tight">5000+<br />Surgeries</div>
+                <div className="text-[#0A2540] font-bold text-xs text-center leading-tight">7000+<br />Surgeries</div>
               </motion.div>
             </div>
           </AnimateIn>
@@ -102,10 +102,10 @@ export default function About() {
             {/* Mini stats */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
               {[
-                { val: '5000+', label: 'Surgeries Performed' },
-                { val: '15+', label: 'Years Experience' },
-                { val: '1500+', label: 'Spine Surgeries' },
-                { val: '98%', label: 'Success Rate' },
+                { val: '7000+', label: 'Successful Surgeries' },
+                { val: '35+', label: 'Years Combined Experience' },
+                { val: '3', label: 'Super-Specialists' },
+                { val: '1', label: 'Unified Clinic Ecosystem' },
               ].map(s => (
                 <div key={s.label} className="text-center p-4 rounded-xl" style={{ background: 'rgba(0,169,157,0.06)', border: '1px solid rgba(0,169,157,0.15)' }}>
                   <div className="font-heading text-2xl font-bold text-[#0A2540]">{s.val}</div>

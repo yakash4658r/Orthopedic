@@ -287,9 +287,9 @@ export const FAQS = [
 
 // ─── STATS ────────────────────────────────────────────────────────
 export const STATS = [
-  { label: 'Surgeries Performed', value: 5000, suffix: '+' },
-  { label: 'Expert Surgeons', value: 4, suffix: '' },
-  { label: 'Years Experience', value: 15, suffix: '+' },
+  { label: 'Surgeries Performed', value: 7000, suffix: '+' },
+  { label: 'Super-Specialists', value: 3, suffix: '' },
+  { label: 'Years Experience', value: 35, suffix: '+' },
   { label: 'Patient Satisfaction', value: 98, suffix: '%' },
 ];
 
