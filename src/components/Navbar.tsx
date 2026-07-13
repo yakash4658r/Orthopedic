@@ -76,7 +76,7 @@ export default function Navbar() {
           {/* Logo */}
           <NavLink to="/" className="flex items-center gap-3 group">
             <div className="w-10 h-10 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
-              <img src={import.meta.env.BASE_URL + 'Logo.png'} alt="Logo" className="w-full h-full object-contain" />
+              <img src="/Logo.png" alt="Logo" className="w-full h-full object-contain" />
             </div>
             <div>
               <span className="font-heading text-white text-xl font-bold tracking-wide leading-none">Ortho</span>

@@ -57,6 +57,19 @@ export const HERO_BANNERS = [
     cta: { label: 'ABOUT DR. PRAKASH', href: '#about-section' },
     bg: import.meta.env.BASE_URL + 'knee_banner.png',
   },
+  {
+    id: 4,
+    doctorName: 'DR. ASHOK S. GAVASKAR',
+    credentials: 'JOINT REPLACEMENT & TRAUMA',
+    bullets: [
+      'Internationally trained, award-winning surgeon',
+      'Over 20+ years of complex surgical experience',
+      'Specializes in joint replacement and deformity correction',
+      'Recognised among India\'s top trauma specialists'
+    ],
+    cta: { label: 'ABOUT DR. ASHOK', href: '#about-section' },
+    bg: import.meta.env.BASE_URL + 'joint_replacement_banner.png',
+  },
 ];
 
 // ─── DOCTORS ──────────────────────────────────────────────────────

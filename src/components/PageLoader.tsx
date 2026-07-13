@@ -32,7 +32,7 @@ export default function PageLoader() {
               transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
               className="w-16 h-16 flex items-center justify-center mb-6"
             >
-              <img src={import.meta.env.BASE_URL + 'Logo.png'} alt="Logo" className="w-full h-full object-contain" />
+              <img src="/Logo.png" alt="Logo" className="w-full h-full object-contain" />
             </motion.div>
 
             {/* Text */}
