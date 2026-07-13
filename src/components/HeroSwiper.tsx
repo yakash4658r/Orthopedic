@@ -48,9 +48,10 @@ export default function HeroSwiper() {
                 </div>
 
                 {/* 2. OVERLAY GRADIENT */}
-                {/* Much lighter overlay so images are clearly visible on the right */}
-                <div className="absolute inset-0 bg-[#0A2540]/60 sm:bg-gradient-to-r from-[#0A2540] via-[#0A2540]/50 to-transparent" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540]/90 via-[#0A2540]/20 to-transparent sm:hidden" />
+                {/* Lighter overlay strictly on the left so the images are fully clear on the right */}
+                <div className="absolute inset-0 bg-[#0A2540]/60 lg:hidden" />
+                <div className="absolute inset-0 hidden lg:block bg-gradient-to-r from-[#0A2540] via-[#0A2540]/80 via-[40%] to-transparent to-[65%]" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540] via-[#0A2540]/40 to-transparent sm:hidden" />
 
                 {/* 3. TEXT CONTENT (Left Aligned) */}
                 <div className="relative z-20 w-full max-w-7xl mx-auto px-6 lg:px-16 flex flex-col justify-center h-full pt-24 lg:pt-32 pb-20">
