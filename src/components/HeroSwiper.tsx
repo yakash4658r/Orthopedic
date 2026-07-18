@@ -14,7 +14,7 @@ export default function HeroSwiper() {
   const navigate = useNavigate();
 
   return (
-    <div className="relative w-full h-[100vh] lg:h-[95vh] lg:min-h-[700px] overflow-hidden bg-[#071828]">
+    <div className="relative w-full h-[100svh] lg:h-[95vh] lg:min-h-[700px] overflow-hidden bg-[#071828]">
       
       <Swiper
         modules={[Autoplay, EffectFade, Pagination, Navigation]}
@@ -43,7 +43,7 @@ export default function HeroSwiper() {
                     <img
                       src={banner.bg}
                       alt={banner.doctorName}
-                      className="w-full h-full object-contain lg:object-right object-center"
+                      className="w-full h-full object-cover lg:object-contain lg:object-right object-top sm:object-center"
                       loading="eager"
                     />
                   </div>
@@ -92,7 +92,7 @@ export default function HeroSwiper() {
                     {/* Main Heading */}
                     {isActive && (
                       <motion.h1
-                        className="font-heading text-4xl sm:text-5xl lg:text-[64px] font-bold text-white tracking-tight leading-[1.1] mb-6"
+                        className="font-heading text-3xl sm:text-5xl lg:text-[64px] font-bold text-white tracking-tight leading-[1.1] mb-5"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.4, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
@@ -104,7 +104,7 @@ export default function HeroSwiper() {
                     {/* Description & Achievements */}
                     {isActive && (
                       <motion.div
-                        className="mb-10 flex flex-col gap-3"
+                        className="mb-8 flex flex-row flex-wrap gap-2 sm:gap-3"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.5, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
@@ -114,10 +114,10 @@ export default function HeroSwiper() {
                           return (
                             <div 
                               key={idx} 
-                              className={`flex items-center gap-3 p-3.5 rounded-2xl border ${isLong ? 'bg-black/20 border-white/5' : 'bg-white/10 border-white/20 backdrop-blur-md shadow-premium'} max-w-xl transition-all hover:bg-white/15`}
+                              className={`flex items-center gap-2 sm:gap-3 p-2.5 sm:p-3.5 rounded-2xl border ${isLong ? 'w-full bg-black/20 border-white/5' : 'flex-1 min-w-[130px] bg-white/10 border-white/20 backdrop-blur-md shadow-premium'} max-w-xl transition-all hover:bg-white/15`}
                             >
-                              {!isLong && <div className="w-2 h-2 rounded-full bg-[#00A99D] shadow-[0_0_8px_#00A99D]" />}
-                              <p className={`text-white leading-snug ${isLong ? 'text-sm font-medium opacity-90' : 'text-sm sm:text-base font-bold tracking-wide uppercase'}`}>
+                              {!isLong && <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 shrink-0 rounded-full bg-[#00A99D] shadow-[0_0_8px_#00A99D]" />}
+                              <p className={`text-white leading-snug ${isLong ? 'text-xs sm:text-sm font-medium opacity-90' : 'text-[10px] sm:text-sm font-bold tracking-wide uppercase'}`}>
                                 {bullet}
                               </p>
                             </div>
