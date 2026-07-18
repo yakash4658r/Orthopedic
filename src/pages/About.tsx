@@ -65,7 +65,7 @@ export default function About() {
           <AnimateIn direction="left" className="lg:col-span-5">
             <div className="relative">
               <div className="rounded-3xl overflow-hidden shadow-premium" style={{ border: '3px solid rgba(201,166,107,0.25)', aspectRatio: '4/5' }}>
-                <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=800&q=80" alt="Ortho3Trio Clinic" className="w-full h-full object-cover" />
+                <img src={import.meta.env.BASE_URL + 'images/about-clinic.jpg'} alt="Dr. Rela Institute & Medical Centre" className="w-full h-full object-cover" />
               </div>
               <motion.div
                 className="absolute -bottom-8 -right-6 bg-white rounded-2xl p-5 shadow-card-hover"

@@ -215,13 +215,9 @@ export default function Contact() {
                   <tbody className="text-sm text-[#8A9BB0]">
                     {/* Dr. Prakash Ayyadurai */}
                     <tr className="border-b border-[#e8edf2] hover:bg-white/50 transition-colors">
-                      <td className="px-6 py-5 align-top font-semibold text-[#0A2540] whitespace-nowrap" rowSpan={2}>Dr. Prakash Ayyadurai</td>
+                      <td className="px-6 py-5 align-top font-semibold text-[#0A2540] whitespace-nowrap">Dr. Prakash Ayyadurai</td>
                       <td className="px-6 py-3 font-medium text-[#00A99D]">Rela Hospital, Chromepet</td>
                       <td className="px-6 py-3">Mon–Sat (9:30 AM – 4:00 PM)</td>
-                    </tr>
-                    <tr className="border-b border-[#e8edf2] hover:bg-white/50 transition-colors">
-                      <td className="px-6 py-3 font-medium text-[#00A99D]">NUO Clinic, Avadi</td>
-                      <td className="px-6 py-3">Monday (6:30 PM – 9:00 PM)</td>
                     </tr>
 
                     {/* Dr. Parthasarathy Srinivasan */}
@@ -233,13 +229,9 @@ export default function Contact() {
 
                     {/* Dr. Ashok S. Gavaskar */}
                     <tr className="border-b border-[#e8edf2] hover:bg-white/50 transition-colors">
-                      <td className="px-6 py-5 align-top font-semibold text-[#0A2540] whitespace-nowrap" rowSpan={2}>Dr. Ashok S. Gavaskar</td>
+                      <td className="px-6 py-5 align-top font-semibold text-[#0A2540] whitespace-nowrap">Dr. Ashok S. Gavaskar</td>
                       <td className="px-6 py-3 font-medium text-[#00A99D]">Rela Hospital, Chromepet</td>
                       <td className="px-6 py-3">Mon–Sat (10:00 AM – 4:00 PM)</td>
-                    </tr>
-                    <tr className="hover:bg-white/50 transition-colors">
-                      <td className="px-6 py-3 font-medium text-[#00A99D]">Sunil's Orthoworld, Anna Nagar</td>
-                      <td className="px-6 py-3">Mon–Sat (5:00 PM – 8:00 PM)</td>
                     </tr>
                   </tbody>
                 </table>

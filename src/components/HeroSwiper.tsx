@@ -101,16 +101,29 @@ export default function HeroSwiper() {
                       </motion.h1>
                     )}
 
-                    {/* Description Paragraph */}
+                    {/* Description & Achievements */}
                     {isActive && (
-                      <motion.p
-                        className="text-white/80 text-sm sm:text-base lg:text-lg leading-relaxed max-w-xl mb-10 font-medium"
+                      <motion.div
+                        className="mb-10 flex flex-col gap-3"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.5, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
                       >
-                        {banner.bullets.join(' • ')}
-                      </motion.p>
+                        {banner.bullets.map((bullet, idx) => {
+                          const isLong = bullet.length > 40;
+                          return (
+                            <div 
+                              key={idx} 
+                              className={`flex items-center gap-3 p-3.5 rounded-2xl border ${isLong ? 'bg-black/20 border-white/5' : 'bg-white/10 border-white/20 backdrop-blur-md shadow-premium'} max-w-xl transition-all hover:bg-white/15`}
+                            >
+                              {!isLong && <div className="w-2 h-2 rounded-full bg-[#00A99D] shadow-[0_0_8px_#00A99D]" />}
+                              <p className={`text-white leading-snug ${isLong ? 'text-sm font-medium opacity-90' : 'text-sm sm:text-base font-bold tracking-wide uppercase'}`}>
+                                {bullet}
+                              </p>
+                            </div>
+                          );
+                        })}
+                      </motion.div>
                     )}
 
                     {/* Buttons */}

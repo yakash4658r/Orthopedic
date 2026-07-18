@@ -18,7 +18,7 @@ export default function BackToTop() {
       {visible && (
         <motion.button
           onClick={scrollTop}
-          className="fixed bottom-24 right-5 z-[8000] w-11 h-11 rounded-full flex items-center justify-center shadow-premium"
+          className="fixed bottom-24 max-md:bottom-[150px] right-5 z-[8000] w-11 h-11 rounded-full flex items-center justify-center shadow-premium"
           style={{ background: 'linear-gradient(135deg, #C9A66B, #E8C98A)', color: '#0A2540' }}
           initial={{ opacity: 0, scale: 0.5, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}

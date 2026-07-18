@@ -38,7 +38,7 @@ export default function Footer() {
   };
 
   return (
-    <footer style={{ background: '#061A30', borderTop: '1px solid rgba(201,166,107,0.15)' }}>
+    <footer className="max-md:pb-24" style={{ background: '#061A30', borderTop: '1px solid rgba(201,166,107,0.15)' }}>
       {/* Top gold strip */}
       <div
         className="text-center py-3 text-xs tracking-widest uppercase font-medium"

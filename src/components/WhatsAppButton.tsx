@@ -9,8 +9,7 @@ export default function WhatsAppButton() {
     <motion.a
       href={whatsappUrl}
       target="_blank"
-      rel="noopener noreferrer"
-      className="fixed bottom-6 right-5 z-[7000] w-14 h-14 rounded-full flex items-center justify-center shadow-premium"
+      className="fixed bottom-6 max-md:bottom-[85px] right-5 z-[7000] w-14 h-14 rounded-full flex items-center justify-center shadow-premium"
       style={{ background: '#25D366' }}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}

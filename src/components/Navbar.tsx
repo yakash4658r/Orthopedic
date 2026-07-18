@@ -64,9 +64,8 @@ export default function Navbar() {
       {/* ── DESKTOP NAVBAR ── */}
       <motion.nav
         className={`fixed left-0 right-0 z-[5000] transition-all duration-500 ${
-          scrolled || !isHome ? 'glass-nav' : 'glass-nav-transparent'
-        }`}
-        style={{ top: microVisible ? 36 : 0 }}
+          scrolled || !isHome ? 'glass-nav !top-0' : 'glass-nav-transparent'
+        } ${microVisible ? 'lg:top-9 top-0' : 'top-0'}`}
         initial={{ y: -80 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
