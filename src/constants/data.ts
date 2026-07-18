@@ -308,9 +308,9 @@ export const STATS = [
 
 // ─── GALLERY ──────────────────────────────────────────────────────
 export const GALLERY_ITEMS = [
-  { id: 1, src: 'https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=800&q=80', alt: 'Modern Clinic Reception', category: 'Clinic', span: 'tall' },
-  { id: 2, src: 'https://images.unsplash.com/photo-1551076805-e1869033e561?w=800&q=80', alt: 'Surgical Suite', category: 'Operations', span: 'normal' },
-  { id: 3, src: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&q=80', alt: 'Consultation Room', category: 'Clinic', span: 'normal' },
+  { id: 1, src: import.meta.env.BASE_URL + 'IMG_7359.WEBP', alt: 'Ortho3Trio Gallery Image 1', category: 'Team', span: 'tall' },
+  { id: 2, src: import.meta.env.BASE_URL + 'IMG_7360.JPG.jpeg', alt: 'Ortho3Trio Gallery Image 2', category: 'Team', span: 'normal' },
+  { id: 3, src: import.meta.env.BASE_URL + 'IMG_7361.JPG.jpeg', alt: 'Ortho3Trio Gallery Image 3', category: 'Team', span: 'normal' },
   { id: 4, src: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800&q=80', alt: 'Doctor Consultation', category: 'Team', span: 'wide' },
   { id: 5, src: 'https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=800&q=80', alt: 'Operating Theatre', category: 'Operations', span: 'normal' },
   { id: 6, src: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&q=80', alt: 'Medical Team', category: 'Team', span: 'tall' },
